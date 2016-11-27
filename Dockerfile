@@ -23,8 +23,8 @@ ENV LANG zh_CN.UTF-8
 ENV LANGUAGE zh_CN.UTF-8
 
 # 配置 git
-RUN git config --global user.name "wanghao8080" \
-  && git config --global user.email "117663444@qq.com"
+# RUN git config --global user.name "wanghao8080" \
+#   && git config --global user.email "117663444@qq.com"
 
 # 安装与配置 composer
 # Composer 官方安装脚本 https://getcomposer.org/download/
