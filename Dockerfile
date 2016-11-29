@@ -51,11 +51,3 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 RUN php -r "readfile('http://files.drush.org/drush.phar');" > drush \
   && chmod +x drush \
   && mv drush /usr/local/bin
-
-# 安装 Drupal Console
-RUN php -r "readfile('https://drupalconsole.com/installer');" > drupal.phar \
-  && mv drupal.phar /usr/local/bin/drupal \
-  && chmod +x /usr/local/bin/drupal \
-  && drupal init --override \
-  && composer require drupal/console:~1.0 --prefer-dist --optimize-autoloader \
-  && composer update drupal/console --with-dependencies \
