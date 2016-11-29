@@ -56,4 +56,6 @@ RUN php -r "readfile('http://files.drush.org/drush.phar');" > drush \
 RUN php -r "readfile('https://drupalconsole.com/installer');" > drupal.phar \
   && mv drupal.phar /usr/local/bin/drupal \
   && chmod +x /usr/local/bin/drupal \
-  && drupal init --override
+  && drupal init --override \
+  && composer require drupal/console:~1.0 --prefer-dist --optimize-autoloader \
+  && composer update drupal/console --with-dependencies \
