@@ -56,8 +56,3 @@ RUN php -r "readfile('http://files.drush.org/drush.phar');" > drush \
 RUN php -r "readfile('https://drupalconsole.com/installer');" > drupal \
   && chmod +x drupal \
   && mv drupal /usr/local/bin
-
-# 安装 Drupal Console
-RUN php -r "readfile('https://drupalconsole.com/installer');" > drupal.phar \
-  && mv drupal.phar /usr/local/bin/drupal \
-  && chmod +x /usr/local/bin/drupal \
