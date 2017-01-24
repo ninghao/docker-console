@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y git curl wget cron vim locales libfreet
   && rm -rf /var/lib/apt/lists/* \
   && pecl install zip \
   && docker-php-ext-enable zip \
-  && docker-php-ext-install mysqli pdo_mysql gd
+  && docker-php-ext-install mysqli pdo_mysql gd bcmath
 
 ENV PHPREDIS_VERSION 3.0.0
 
