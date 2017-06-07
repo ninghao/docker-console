@@ -55,4 +55,5 @@ RUN php -r "readfile('http://files.drush.org/drush.phar');" > drush \
 # 安装管理 Drupal 项目的 Drupal Console
 RUN php -r "readfile('https://drupalconsole.com/installer');" > drupal \
   && chmod +x drupal \
-  && mv drupal /usr/local/bin
+  && mv drupal /usr/local/bin \
+  && drupal self-update
