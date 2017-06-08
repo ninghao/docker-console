@@ -4,7 +4,7 @@ MAINTAINER wanghao <wanghao@ninghao.net>
 WORKDIR /mnt/app
 
 # 常用工具
-RUN apt-get update && apt-get install -y git curl wget cron vim locales libfreetype6-dev mariadb-client \
+RUN apt-get update && apt-get install -y git curl wget cron vim locales libfreetype6-dev mariadb-client libzip-dev \
   && rm -rf /var/lib/apt/lists/* \
   && pecl install zip \
   && docker-php-ext-enable zip \
